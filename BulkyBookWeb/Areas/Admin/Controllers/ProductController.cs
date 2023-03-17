@@ -62,7 +62,7 @@ public class ProductController : Controller
         {
             _unitOfWork.CoverType.Update(obj);
             _unitOfWork.Save();
-            TempData["success"] = "Cover Type updated successfully.";
+            TempData["success"] = "Product updated successfully.";
             return RedirectToAction("Index");
         }
         return View(obj);
@@ -96,7 +96,7 @@ public class ProductController : Controller
         }
         _unitOfWork.CoverType.Remove(obj);
         _unitOfWork.Save();
-        TempData["success"] = "Cover Type deleted successfully.";
+        TempData["success"] = "Product deleted successfully.";
         return RedirectToAction("Index");
     }
 }
